@@ -45,8 +45,8 @@ Task.create(title: 'Learn Rust Basics', description: 'Start Rust Beginners cours
 Task.create(title: 'Make Simple App using Rust', description: 'Make a simple app with the new Rust knowledge.', difficulty: 7, due_date: '20190729', project_id: rust.id)
 
 # Add Photos to Projects
-native.image.attach(io: File.open('../storage/project_card_photos'), filename: 'native.jpg')
-crypto.image.attach(io: File.open('../storage/project_card_photos'), filename: 'crypto.jpg')
-orbs.image.attach(io: File.open('../storage/project_card_photos'), filename: 'orbs.jpg')
-vr.image.attach(io: File.open('../storage/project_card_photos'), filename: 'vr.jpg')
-rust.image.attach(io: File.open('../storage/project_card_photos'), filename: 'rust.jpg')
+native.card_photo.attach(io: File.open('./storage/native.jpg'), filename: 'native.jpg')
+crypto.card_photo.attach(io: File.open('./storage/crypto.jpg'), filename: 'crypto.jpg')
+orbs.card_photo.attach(io: File.open('./storage/orbs.jpg'), filename: 'orbs.jpg')
+vr.card_photo.attach(io: File.open('./storage/vr.jpg'), filename: 'vr.jpg')
+rust.card_photo.attach(io: File.open('./storage/rust.jpg'), filename: 'rust.jpg')

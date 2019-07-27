@@ -3,11 +3,10 @@ class ProjectsController < ApplicationController
 
   # GET /projects
   def index
-    @projects = Project.all
+    @projects = Project.all.with_attached_card_photo
 
     render json: @projects
   end
-
   # GET /projects/1
   def show
     render json: @project
