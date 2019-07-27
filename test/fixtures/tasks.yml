@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyString
+  difficulty: 1
+  completed: false
+  due_date: 2019-07-25
+  project: one
+
+two:
+  title: MyString
+  description: MyString
+  difficulty: 1
+  completed: false
+  due_date: 2019-07-25
+  project: two
