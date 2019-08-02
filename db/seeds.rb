@@ -9,11 +9,11 @@ Task.destroy_all
 dean = User.create(first_name: 'Constantine', last_name: 'Chutis', email: 'dean@dean.com', password: '123', dark_mode: false) 
 
 # Project - Name, Language, Due Date (Date), User.id
-native = Project.create(name: 'Recursive Mobile App', language: 'React Native', due_date: '20190729', user_id: dean.id )
-crypto = Project.create(name: 'Cryptocurrenct Rails App', language: 'Ruby', due_date: '20190725', user_id: dean.id )
-orbs = Project.create(name: 'Orbs//OS', language: 'Javascript', due_date: '20190912', user_id: dean.id )
-vr = Project.create(name: 'VR Game Project', language: 'C#', due_date: '20190728', user_id: dean.id )
-rust = Project.create(name: 'Learn Rust', language: 'Rust', due_date: '20190413', user_id: dean.id )
+native = Project.create(name: 'Recursive Mobile App', language: 'React Native', due_date: '20190729', photo: 'https://appinventiv.com/blog/wp-content/uploads/2018/12/React-Native-vs-Native-App-Development.jpg', user_id: dean.id )
+crypto = Project.create(name: 'Cryptocurrency Rails App', language: 'Ruby', due_date: '20190725', photo: 'https://en.bitcoinwiki.org/upload/en/images/thumb/6/62/BiteMyCoin-Cryptocurrency.png/500px-BiteMyCoin-Cryptocurrency.png', user_id: dean.id )
+orbs = Project.create(name: 'Orbs//OS', language: 'Javascript', due_date: '20190912', photo: 'https://i.ibb.co/0FsLbkv/orbs.jpg', user_id: dean.id )
+vr = Project.create(name: 'VR Game Project', language: 'C#', due_date: '20190728', photo: 'https://opto.ca/sites/default/files/virtual_headset_man_medium_istock-618761378.jpg', user_id: dean.id )
+rust = Project.create(name: 'Learn Rust', language: 'Rust', due_date: '20190413', photo: 'https://i.udemycdn.com/course/750x422/624252_3505_3.jpg', user_id: dean.id )
 
 # Tasks - Title, Description, Difficulty (Num), Due Date (Date), Project.id
 
@@ -43,10 +43,3 @@ Task.create(title: 'Launch and Test Scene', description: 'Launch a new scene and
 Task.create(title: 'Sign up for FreeCodeCamp', description: 'Visit FreeCodeCamp website and sign up for an account.', difficulty: 3, due_date: '20190729', project_id: rust.id)
 Task.create(title: 'Learn Rust Basics', description: 'Start Rust Beginners course.', difficulty: 5, due_date: '20190729', project_id: rust.id)
 Task.create(title: 'Make Simple App using Rust', description: 'Make a simple app with the new Rust knowledge.', difficulty: 7, due_date: '20190729', project_id: rust.id)
-
-# Add Photos to Projects
-native.card_photo.attach(io: File.open('./storage/native.jpg'), filename: 'native.jpg')
-crypto.card_photo.attach(io: File.open('./storage/crypto.jpg'), filename: 'crypto.jpg')
-orbs.card_photo.attach(io: File.open('./storage/orbs.jpg'), filename: 'orbs.jpg')
-vr.card_photo.attach(io: File.open('./storage/vr.jpg'), filename: 'vr.jpg')
-rust.card_photo.attach(io: File.open('./storage/rust.jpg'), filename: 'rust.jpg')

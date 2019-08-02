@@ -1,6 +1,5 @@
 class Project < ApplicationRecord
   belongs_to :user
-  has_many :tasks
-  has_one_attached :card_photo
+  has_many :tasks, dependent: :destroy
 
 end

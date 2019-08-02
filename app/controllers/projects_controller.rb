@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects
   def index
-    @projects = Project.all.with_attached_card_photo
+    @projects = Project.all
 
     render json: @projects
   end
@@ -14,13 +14,15 @@ class ProjectsController < ApplicationController
 
   # POST /projects
   def create
-    @project = Project.new(project_params)
-
-    if @project.save
-      render json: @project, status: :created, location: @project
-    else
-      render json: @project.errors, status: :unprocessable_entity
-    end
+    # byebug
+    @project = Project.create(project_params)
+    
+    render json: @project, status: :created, location: @project
+    # if @project.save
+    #   render json: @project, status: :created, location: @project
+    # else
+    #   render json: @project.errors, status: :unprocessable_entity
+    # end
   end
 
   # PATCH/PUT /projects/1
@@ -45,6 +47,6 @@ class ProjectsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def project_params
-      params.require(:project).permit(:name, :language, :due_date, :user_id, :card_photo)
+      params.require(:project).permit(:name, :language, :due_date, :user_id, :photo)
     end
 end
