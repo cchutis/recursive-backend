@@ -18,7 +18,6 @@ gem 'puma', '~> 3.11'
 gem 'active_model_serializers'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-gem 'bundler', '>= 2.0.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
